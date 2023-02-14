@@ -12,7 +12,7 @@ tCompressFunc m_compressFunc;
 
 void initWrapper (void) {
     try {
-    	wl = new WindowsLibrary(WindowsLibrary::Load("oo2core_3_win64.dll"));
+    	wl = new WindowsLibrary(WindowsLibrary::Load("ext_lib/oo2core_3_win64.dll"));
     	m_decompressFunc = reinterpret_cast<tDecompressFunc>(wl->GetExport("OodleLZ_Decompress"));
     	m_compressFunc = reinterpret_cast<tCompressFunc>(wl->GetExport("OodleLZ_Compress"));
     } catch (std::exception &e) {
